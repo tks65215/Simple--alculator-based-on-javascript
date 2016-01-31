@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Сайт</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/classes.css">
+<link rel="stylesheet" href="css/feedback.css">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'> 
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+<script>
+
+function docalculations() {
+
+var A=parseInt(document.getElementById("A").value);
+
+var B=parseInt(document.getElementById("B").value);
+
+var C=document.getElementById("C").value;
+var operation=document.getElementById("operation").value;
+	switch (operation) {
+		case "1": C=A+B;break;
+		case "2": C=A-B;break;
+		case "3": C=A*B;break;
+		case "4": C=A/B;break;
+	}
+	document.getElementById("C").value=C;
+	
+
+}
+
+
+</script>
+ 
+ 
+ <div class="w3-card-4;  style="width:100%;">
+<header class="w3-container w3-indigo" style="w3-center">
+<h3>Пример работы сложнейшего калькулятора на Javascript. Для вычесления введите два числа и нажмите соответствующую необходимой операции кнопку.</h3>
+</header>
+ <div style="text-align: center; margin-bottom: 5px; margin-top: 10px;">
+<label>Первое число</label>
+<input class="w3-input w3-center" id="A" type="number">
+<label>Второе число</label>
+<input class="w3-input w3-center" id="B" type="number">
+ </form>
+ <div style="margin-top: 10px ;">
+		Операция: <select id="operation">
+			<option value="1">+</option>
+			<option value="2">-</option>
+			<option value="3">*</option>
+			<option value="4">/</option>
+		 </select><br>
+		 <div style="margin-top: 10px ; margin-bottom: 10px;">
+		<button class="w3-btn w3-indigo"; onclick="docalculations()">Решить сию сложнейшую задачу</button><br>
+		</div>
+
+		Результат выходит следующий:<input class="w3-input w3-indigo w3-center" type="number" id="C" value="0" disabled>Результат</input><br>
+		<script>
+    function showPS() {
+	document.write('p.s. если результат "NaN" - ты просто ненормальный и сломал вечный калькулятор.');
+	}
+</script>
+	<div style="margin-top: 10px;">
+		<button class="w3-btn w3-indigo"; onclick="showPS()">P.S.</button>
+    </div>
+ </div> 
+</div> 
+</div> 
+
+</html>
